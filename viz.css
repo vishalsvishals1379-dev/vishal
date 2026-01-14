@@ -1,0 +1,221 @@
+/* --- Variables & Reset --- */
+:root {
+    --navy: #0d1b2a;       /* Deep Navy from logo ring */
+    --navy-light: #1b263b;
+    --gold: #c5a059;       /* Gold from logo crown */
+    --gold-hover: #d4af37;
+    --white: #ffffff;
+    --gray: #f4f4f4;
+    --text-dark: #333;
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: var(--navy);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    color: var(--gold);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 10px 25px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: var(--white);
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--white);
+    padding: 12px 30px;
+    display: inline-block;
+    border: 2px solid var(--gold);
+    font-weight: bold;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+.btn-outline {
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    padding: 12px 30px;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80'); /* Subtle background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-logo {
+    width: 150px;
+    margin-bottom: 2rem;
+    /* Optional: If your logo has a white background, mix-blend-mode can help it blend, 
+       but transparency is best. */
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Section Styling --- */
+.section {
+    padding: 5rem 0;
+    background-color: var(--gray);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--navy);
+}
+
+.underline {
+    width: 60px;
+    height: 3px;
+    background-color: var(--gold);
+    margin: 10px auto 0;
+}
+
+/* --- Grid Cards --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 2.5rem;
+    text-align: center;
+    border-top: 4px solid var(--gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-family: var(--font-heading);
+    color: var(--navy);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+}
